@@ -1,0 +1,73 @@
+<!-- TRANSFERÊNCIA -->
+<div class="transferencia">
+
+    <div id="wrapper">
+
+        <div ng-include="'view/common/header.html'"></div>
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form class="form-signin" name="formTransferencia" method="post">
+                            <div class="panel panel-default">
+    							<div class="panel-heading">
+    								Nova Transferência
+    							</div>
+    							<div class="panel-body">
+                                    <div class="col-md-6">
+                                        <fieldset>
+                                            <div class="col-md-6">                               
+                								<div class="form-group">
+                                                    <label>Agência: {{nomeAgencia}}</label>
+                                                    <input type="number" class="form-control" ng-class="{invalid: agenciaInvalid}" name="agencia" placeholder="Agência" ng-model="transferencia.agencia" ng-blur="validaAgencia(transferencia)">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6" ng-show="contaVisible">
+                                                <div class="form-group">
+                                                    <label>Conta: {{nomeConta}}</label>
+                                                    <input type="number" class="form-control" ng-class="{invalid: contaInvalid}" name="conta" placeholder="Conta" ng-model="transferencia.conta" ng-blur="validaConta(transferencia)" focus-me="{{contaVisible}}">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6" ng-show="valorVisible && contaVisible">
+                                                <div class="form-group">
+                                                    <label>Valor: (até:  {{saldoConta}})</label>
+                                                    <input type="number" class="form-control" ng-class="{invalid: valorInvalid}" name="valor" placeholder="Valor" ng-model="transferencia.valor" ng-blur="validaValor(transferencia)" focus-me="{{valorVisible}}" max="{{saldoConta}}">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6" ng-show="valorVisible && contaVisible">                               
+                                                <div class="form-group">
+                                                    <label>Senha:</label>
+                                                    <input type="password" class="form-control" ng-class="{invalid: senhaInvalid}" name="senha" placeholder="Senha" ng-model="transferencia.senha">
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+    							</div>
+    							<div class="panel-footer">
+    								<button type="button" class="btn btn-success" ng-click="salvar(transferencia)" ng-disabled="invalidForm" ng-init="invalidForm=true"><i class="fa fa-check"></i> Salvar</button>
+                                    <a href="#/transferencia" class="btn btn-danger"><i class="fa fa-close"></i> Cancelar</a>
+    							</div>
+                            </div>
+                        </form>
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</div>
+<!-- FIM TRANSFERÊNCIA -->

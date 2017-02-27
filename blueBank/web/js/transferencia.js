@@ -1,0 +1,1 @@
+angular.module("transferencia", ["ngRoute", "ngCookies", "ngMessages"]);

@@ -1,0 +1,20 @@
+<!-- Sidebar -->
+<div id="sidebar-wrapper" ng-controller="headerCtrl">
+    <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+            <a href="#/transferencia">
+                Blue Bank
+            </a>
+        </li>
+        <li class="dadosConta">
+            <p>Agência: {{agencia}}</p>
+            <p>Conta: {{conta}}</p>
+            <p>Saldo: R$ {{saldo}}</p>
+        </li>
+        <li>
+            <a href="#/transferencia">Transferência</a>
+            <a ng-click="deslogar()" href="">Sair</a>
+        </li>
+    </ul>
+</div>
+<!-- /#sidebar-wrapper -->
