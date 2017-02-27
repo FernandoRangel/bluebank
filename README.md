@@ -10,6 +10,17 @@ Copiar a pasta blueBank para sua pasta localhost (WAMP: C:/wamp/www);
 Configurar conexão com o banco de dados no arquivo bluebank/web/bd/conexao.php;  
 Configurar a URL no arquivo bluebank/web/js/config/valueConfig.js;  
 
+**Login**  
+Agência: 1478  
+Conta: 12345  
+Senha: 1234  
+
+ou  
+
+Agência: 2587  
+Conta: 69856  
+Senha: 4321  
+
 **-----------------------------------------------------------------**
 
 # Blue Bank - Estamos contratando!
