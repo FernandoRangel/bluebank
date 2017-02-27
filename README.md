@@ -1,3 +1,17 @@
+# DEPLOY
+A aplicação foi desenvolvida utilizando: AngularJS, Jquery, Bootstrap, PHP, MySQL.
+
+**Ferramentas Necessárias**
+Apache, MySQL e PHP (utilizado: WAMP);
+
+**Configuração**
+Fazer upload do arquivo bluebank.sql para o MySQL;
+Copiar a pasta blueBank para sua pasta localhost (WAMP: C:/wamp/www);
+Configurar conexão com o banco de dados no arquivo bluebank/web/bd/conexao.php
+Configurar a URL no arquivo bluebank/web/js/config/valueConfig.js
+
+**----------------------------------------------**
+
 # Blue Bank - Estamos contratando!
 
 
